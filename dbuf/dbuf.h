@@ -35,7 +35,7 @@ extern "C" {
 
 #define DBUFFER_SIZE     1024           /* 1024 bytes for each buffer */
 #define DBUFFER_NUM 	   2		/* 2 buffers */
-#define DBUFFER_TRIGGER  800
+#define DBUFFER_TRIGGER  800            /* Default value */
 
    
      
@@ -50,7 +50,7 @@ typedef enum {
 /* Status of a buffer : */
 typedef enum {
     DBUFFER_STATUS_AVAILABLE,      /* Free to write on */
-    DBUFFER_STATUS_LOCKED,           /* Busy, reading operations */
+    DBUFFER_STATUS_LOCKED,         /* Busy, reading operations */
     DBUFFER_STATUS_ERROR           /* Error occurred, unavailable buffer */
 } dbuffer_status;
 
